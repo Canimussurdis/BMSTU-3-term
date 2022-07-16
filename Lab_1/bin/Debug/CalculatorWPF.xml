@@ -1,0 +1,514 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CalculatorWPF</name>
+    </assembly>
+    <members>
+        <member name="T:SquareRootOfNegativeException">
+            <summary>
+            Exception that is thrown in case of taking square root of negative number.
+            </summary>
+        </member>
+        <member name="M:SquareRootOfNegativeException.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:SquareRootOfNegativeException.#ctor(System.String)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="message">Exception message</param>
+        </member>
+        <member name="M:SquareRootOfNegativeException.#ctor(System.String,System.ArithmeticException)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="message">Exception message</param>
+            <param name="inner">Exception that is the cause of this exception</param>
+        </member>
+        <member name="T:CalculatorWPF.App">
+            <summary>
+            Interaction logic for App.xaml
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:CalculatorWPF.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:CalculatorWPF.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:CalculatorWPF.MainWindow">
+            <summary>
+            Interaction logic for MainWindow.xaml
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="F:CalculatorWPF.MainWindow.inputValidator">
+            <summary>
+            Member for storing and validation current input.
+            </summary>
+        </member>
+        <member name="F:CalculatorWPF.MainWindow.memory">
+            <summary>
+            Member for storing memory value.
+            </summary>
+        </member>
+        <member name="F:CalculatorWPF.MainWindow.operationExecutor">
+            <summary>
+            Member for executing operations and storing operands, operator.
+            </summary>
+        </member>
+        <member name="F:CalculatorWPF.MainWindow.outputFormatter">
+            <summary>
+            Member for formatting output for main, secondary outputs.
+            </summary>
+        </member>
+        <member name="M:CalculatorWPF.MainWindow.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:CalculatorWPF.MainWindow.CloseWindow(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Closes window. Exits application.
+            </summary>
+        </member>
+        <member name="M:CalculatorWPF.MainWindow.DragMoveWindow(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Sets windown into DragMove state.
+            </summary>
+        </member>
+        <member name="M:CalculatorWPF.MainWindow.MinimizeWindow(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Minimizes window.
+            </summary>
+        </member>
+        <member name="M:CalculatorWPF.MainWindow.AppendCharacter(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Appends character depending on pressed button.
+            </summary>
+        </member>
+        <member name="M:CalculatorWPF.MainWindow.CalculateResult(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Calculates result of inputted expression.
+            </summary>
+        </member>
+        <member name="M:CalculatorWPF.MainWindow.ChangeSign(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Changes sign of current input.
+            </summary>
+        </member>
+        <member name="M:CalculatorWPF.MainWindow.ClearAll(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Sets app into default state.
+            </summary>
+        </member>
+        <member name="M:CalculatorWPF.MainWindow.ClearInput(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Clears current input.
+            </summary>
+        </member>
+        <member name="M:CalculatorWPF.MainWindow.RemoveCharacter(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Removes one character from the right of current input.
+            </summary>
+        </member>
+        <member name="M:CalculatorWPF.MainWindow.SetMainOutput(System.String)">
+            <summary>
+            Sets main output label text to given.
+            </summary>
+            <param name="output">Text to set into main output label</param>
+        </member>
+        <member name="M:CalculatorWPF.MainWindow.SetMemoryIndicator(System.Boolean)">
+            <summary>
+            Sets memory indicator state.
+            </summary>
+            <param name="state">Current memory state (full - true or empty - false)</param>
+        </member>
+        <member name="M:CalculatorWPF.MainWindow.SetMemoryState(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Sets memory state depending on pressed button.
+            </summary>
+        </member>
+        <member name="M:CalculatorWPF.MainWindow.SetSecondaryOutput(System.String)">
+            <summary>
+            Sets secondary output label text to given.
+            </summary>
+            <param name="output">Text to set into secondary output label</param>
+        </member>
+        <member name="M:CalculatorWPF.MainWindow.SetOperation(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Sets operator depending on pressed button.
+            </summary>
+        </member>
+        <member name="M:CalculatorWPF.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:CalculatorWPF.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:CalculatorWPF.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:CalculatorWPF.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:ExecutorState">
+            <summary>
+            Executor state type enum.
+            </summary>
+        </member>
+        <member name="F:ExecutorState.FirstOperandInput">
+            <summary>
+            Waiting for first operand input. Ends when operator is got.
+            </summary>
+        </member>
+        <member name="F:ExecutorState.OperatorGot">
+            <summary>
+            Sets when operator is got. Waiting for operator change or starting second operand input.
+            </summary>
+        </member>
+        <member name="F:ExecutorState.SecondOperandInput">
+            <summary>
+            Waiting for second operand input. Ends when result is requested.
+            </summary>
+        </member>
+        <member name="F:ExecutorState.ResultCalculated">
+            <summary>
+            Sets when result is calculated. Ends when class is cleared or new input started.
+            </summary>
+        </member>
+        <member name="F:ExecutorState.Error">
+            <summary>
+            Sets when arithmetic error occurred while calculating result. Ends when class is cleared or new input started.
+            </summary>
+        </member>
+        <member name="T:Memory">
+            <summary>
+            Memory buffer.
+            </summary>
+        </member>
+        <member name="P:Memory.Value">
+            <summary>
+            Current value.
+            </summary>
+        </member>
+        <member name="M:Memory.Clear">
+            <summary>
+            Sets current value to undefined state.
+            </summary>
+        </member>
+        <member name="M:Memory.IsEmpty">
+            <summary>
+            Checks if current value is in undefined state.
+            </summary>
+            <returns>True if current value is equal to null else false</returns>
+        </member>
+        <member name="T:OperatorType">
+            <summary>
+            Arithmetic operator type enum.
+            </summary>
+        </member>
+        <member name="F:OperatorType.Addition">
+            <summary>
+            Sum operator
+            </summary>
+        </member>
+        <member name="F:OperatorType.Subtraction">
+            <summary>
+            Subtraction operator
+            </summary>
+        </member>
+        <member name="F:OperatorType.Multiplication">
+            <summary>
+            Multiplication operator
+            </summary>
+        </member>
+        <member name="F:OperatorType.Division">
+            <summary>
+            Division operator
+            </summary>
+        </member>
+        <member name="F:OperatorType.Inversion">
+            <summary>
+            Inversion operator
+            </summary>
+        </member>
+        <member name="F:OperatorType.SquareRoot">
+            <summary>
+            Square root operator
+            </summary>
+        </member>
+        <member name="T:OperationExecutor">
+            <summary>
+            Class that stores operands and operator, calculates value of expression.
+            </summary>
+        </member>
+        <member name="F:OperationExecutor.operator_">
+            <summary>
+            Arithmetic operator.
+            </summary>
+        </member>
+        <member name="P:OperationExecutor.FirstOperand">
+            <summary>
+            First operand.
+            </summary>
+        </member>
+        <member name="P:OperationExecutor.SecondOperand">
+            <summary>
+            Second operand.
+            </summary>
+        </member>
+        <member name="P:OperationExecutor.Operator">
+            <summary>
+            Arithmetic operator property.
+            </summary>
+        </member>
+        <member name="P:OperationExecutor.State">
+            <summary>
+            Current state of class.
+            </summary>
+        </member>
+        <member name="M:OperationExecutor.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:OperationExecutor.Calculate">
+            <summary>
+            Calculates result of applying operator to operands.
+            </summary>
+            <returns>Calculation result</returns>
+            <exception cref="T:System.NullReferenceException">Thrown in case of first operand being undefined</exception>
+        </member>
+        <member name="M:OperationExecutor.Clear">
+            <summary>
+            Clears current class state.
+            </summary>
+        </member>
+        <member name="M:OperationExecutor.ClearLastOperand">
+            <summary>
+            Clears last defined operand.
+            </summary>
+        </member>
+        <member name="M:OperationExecutor.MakeArithmeticCalculation">
+            <summary>
+            Performs arithmetic calculation depending on operator.
+            </summary>
+            <returns>Calculation result</returns>
+            <exception cref="T:System.NotSupportedException">Thrown in case of operator is not recognized</exception>
+        </member>
+        <member name="T:OutputFormatter">
+            <summary>
+            Class that formats output for output labels.
+            </summary>
+        </member>
+        <member name="F:OutputFormatter.nfi">
+            <summary>
+            Util for setting number format configuration.
+            </summary>
+        </member>
+        <member name="M:OutputFormatter.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:OutputFormatter.BeautifyNumber(System.Double)">
+            <summary>
+            Converts number to string. If double is equal to int (contains only whole part), converts it to int.
+            </summary>
+            <param name="number">Number to convert</param>
+            <returns>Converted string</returns>
+        </member>
+        <member name="M:OutputFormatter.MakeMemory(System.Double)">
+            <summary>
+            Beautifies given number to be shown in memory output.
+            </summary>
+            <param name="memory">Number to be shown in memory output</param>
+            <returns>Beautified given number</returns>
+        </member>
+        <member name="M:OutputFormatter.MakeResult(System.Double)">
+            <summary>
+            Beautifies given number to be shown in result (main) output.
+            </summary>
+            <param name="result">Number to be show in result (main) output</param>
+            <returns>Beautified given number</returns>
+        </member>
+        <member name="M:OutputFormatter.MakeTempExpression(System.Nullable{System.Double},System.Nullable{System.Double},System.Nullable{OperatorType})">
+            <summary>
+            Makes temporary expression from given expression parts.
+            </summary>
+            <param name="firstOperand">First operand</param>
+            <param name="secondOperand">Second operand</param>
+            <param name="operator_">Operator</param>
+            <returns>Temporary expression as string</returns>
+        </member>
+        <member name="M:OutputFormatter.PrintError">
+            <summary>
+            Returns error message to be shown in result (main) output.
+            </summary>
+            <returns>Error message as string</returns>
+        </member>
+        <member name="T:InputValidator">
+            <summary>
+            Buffer that contains current input in its state and validates it.
+            </summary>
+        </member>
+        <member name="P:InputValidator.MaxInputLength">
+            <summary>
+            Maximum valid input length.
+            </summary>
+        </member>
+        <member name="F:InputValidator.decimalSeparator">
+            <summary>
+            Decimal fractional separator.
+            </summary>
+        </member>
+        <member name="F:InputValidator.negativeSign">
+            <summary>
+            Negative sign.
+            </summary>
+        </member>
+        <member name="F:InputValidator.defaultValue">
+            <summary>
+            Default input value (state).
+            </summary>
+        </member>
+        <member name="P:InputValidator.Value">
+            <summary>
+            Current value (state) of input.
+            </summary>
+        </member>
+        <member name="M:InputValidator.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:InputValidator.ChangeSign">
+            <summary>
+            Changes sign of current input.
+            </summary>
+            <returns>Updated input value</returns>
+        </member>
+        <member name="M:InputValidator.ClearCharacter">
+            <summary>
+            Clears last right character from input. If input contained one-digit number, sets it to default value;
+            </summary>
+            <returns>Updated input value</returns>
+        </member>
+        <member name="M:InputValidator.ClearInput">
+            <summary>
+            Sets value to its default value;
+            </summary>
+            <returns>Updated input value</returns>
+        </member>
+        <member name="M:InputValidator.ConvertToOperatorType(System.String)">
+            <summary>
+            Converts string representation of operator to OperatorType.
+            </summary>
+            <param name="operatorText">String representation of operator</param>
+            <returns>Operator as OperatorType</returns>
+            <exception cref="T:System.NotSupportedException">Thrown in case of string is not recognized as operator</exception>
+        </member>
+        <member name="M:InputValidator.getInput">
+            <summary>
+            Gets input value as double.
+            </summary>
+            <returns>Input value as double</returns>
+        </member>
+        <member name="M:InputValidator.HasDefault">
+            <summary>
+            Checks if input is in its default state.
+            </summary>
+            <returns>True if value is equal to default value else false</returns>
+        </member>
+        <member name="M:InputValidator.Validate(System.String)">
+            <summary>
+            Appends digits or decimal fraction separator characters to input if it becomes valid afterwards.
+            </summary>
+            <param name="input">Characters to append</param>
+            <returns>Updated input value</returns>
+            <exception cref="T:System.NotSupportedException">Thrown if given characters is not digit or decimal fraction separator.</exception>
+        </member>
+        <member name="T:ArithmeticCalculator">
+            <summary>
+            Static class that performs all the arithmetic calculations.
+            </summary>
+        </member>
+        <member name="M:ArithmeticCalculator.Add(System.Double,System.Double)">
+            <summary>
+            Calculates sum of given operands.
+            </summary>
+            <param name="a">First operand</param>
+            <param name="b">Second operand</param>
+            <returns>Sum of given operands</returns>
+        </member>
+        <member name="M:ArithmeticCalculator.ChangeSign(System.Double)">
+            <summary>
+            Changes unary sign of given number.
+            </summary>
+            <param name="a">Number to change sing of</param>
+            <returns>Negative number</returns>
+        </member>
+        <member name="M:ArithmeticCalculator.Divide(System.Double,System.Double)">
+            <summary>
+            Divides first operand by second operand.
+            </summary>
+            <param name="a">First operand</param>
+            <param name="b">Second operand</param>
+            <returns>Result of division of given operands</returns>
+            <exception cref="T:System.DivideByZeroException">Thrown if second operand is equal to 0</exception>
+        </member>
+        <member name="M:ArithmeticCalculator.Invert(System.Double)">
+            <summary>
+            Inverts a number i. e. divides 1 by given number.
+            </summary>
+            <param name="a">Number to invert</param>
+            <returns>Inverted number</returns>
+            <exception cref="T:System.DivideByZeroException">Thrown if given number is equal to 0</exception>
+        </member>
+        <member name="M:ArithmeticCalculator.Multiply(System.Double,System.Double)">
+            <summary>
+            Multiplies first operand by second operand.
+            </summary>
+            <param name="a">First operand</param>
+            <param name="b">Second operand</param>
+            <returns>Result of multiplication of given operands</returns>
+        </member>
+        <member name="M:ArithmeticCalculator.Subtract(System.Double,System.Double)">
+            <summary>
+            Subtracts second operand from first operand.
+            </summary>
+            <param name="a">First operand</param>
+            <param name="b">Second operand</param>
+            <returns>Result of subtraction of given operands</returns>
+        </member>
+        <member name="M:ArithmeticCalculator.SquareRoot(System.Double)">
+            <summary>
+            Calculates square root of given number.
+            </summary>
+            <param name="a">Number to calculate square root of</param>
+            <returns>Square root of given number</returns>
+            <exception cref="T:SquareRootOfNegativeException">Thrown if given number is less than 0</exception>
+        </member>
+    </members>
+</doc>
