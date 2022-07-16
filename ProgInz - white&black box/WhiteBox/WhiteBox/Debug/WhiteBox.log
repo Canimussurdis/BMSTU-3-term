@@ -1,0 +1,5 @@
+﻿  main.c
+C:\Git\ProgInz\WhiteBox\WhiteBox\main.c(46,40): warning C4047: !=: "int *" отличается по уровням косвенного обращения от "int"
+C:\Git\ProgInz\WhiteBox\WhiteBox\main.c(45,7): warning C4101: array: неиспользованная локальная переменная
+C:\Git\ProgInz\WhiteBox\WhiteBox\main.c(54,7): warning C4101: new_array: неиспользованная локальная переменная
+  WhiteBox.vcxproj -> C:\Git\ProgInz\WhiteBox\Debug\WhiteBox.exe

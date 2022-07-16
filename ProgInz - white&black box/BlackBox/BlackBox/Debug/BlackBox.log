@@ -1,0 +1,6 @@
+﻿  main.c
+C:\Git\ProgInz\BlackBox\BlackBox\main.c(27,19): warning C4047: ==: "int *" отличается по уровням косвенного обращения от "int"
+C:\Git\ProgInz\BlackBox\BlackBox\main.c(28,22): warning C4133: функция: несовместимые типы - из "char *" в "FILE *const "
+C:\Git\ProgInz\BlackBox\BlackBox\main.c(34,34): warning C4047: функция: "size_t" отличается по уровням косвенного обращения от "int *"
+C:\Git\ProgInz\BlackBox\BlackBox\main.c(34,29): warning C4024: calloc: различные типы для формального и фактического параметров 1
+  BlackBox.vcxproj -> C:\Git\ProgInz\BlackBox\Debug\BlackBox.exe

@@ -1,0 +1,1 @@
+Strings contain anything other than numbers

@@ -1,0 +1,5 @@
+﻿  header.c
+  main.c
+  Создание кода...
+header.obj : error LNK2001: неразрешенный внешний символ size_array.
+C:\Git\ProgInz\WhiteBox\x64\Debug\WhiteBox.exe : fatal error LNK1120: неразрешенных внешних элементов: 1

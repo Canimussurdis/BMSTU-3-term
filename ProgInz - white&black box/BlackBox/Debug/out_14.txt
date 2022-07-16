@@ -1,0 +1,1 @@
+Strings contain real numbers
